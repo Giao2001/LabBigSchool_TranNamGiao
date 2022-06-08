@@ -10,7 +10,6 @@ namespace LabBigSchool_TranNamGiao.ViewModels
     public class CourseViewModel
     {
         [Required]
-
         public string Place { get; set; }
 
         [Required]
@@ -18,6 +17,7 @@ namespace LabBigSchool_TranNamGiao.ViewModels
         public string Date { get; set; }
 
         [Required]
+        [FutureDate]
         public string Time { get; set; }
 
         [Required]
