@@ -11,24 +11,28 @@
                 </li>
                 <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
             @*<div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    @User.Identity.GetUserName()
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Course I'm Going</a>
-                    <a class="dropdown-item" href="#">Lecture I'm Going</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
-                </div>
-            </div>*@
+                    <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @User.Identity.GetUserName()
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Course I'm Going</a>
+                        <a class="dropdown-item" href="#">Lecture I'm Going</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                    </div>
+                </div>*@
             <li class="dropdown-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     @User.Identity.GetUserName()
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="dropdown-item" href="#">Course I'm Going</li>
-                    <li class="dropdown-item" href="#">Lecture I'm Going</li>
+                    <li class="dropdown-item">
+                        <a href="@Url.Action("Attending", "Courses")">
+                            Course I'm Going
+                        </a>
+                    </li>
+                    <li class="dropdown-item" href="#">Lecture I'm Flowing</li>
                     <li class="dropdown-divider" role="separator"></li>
                     <li>
                         <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
